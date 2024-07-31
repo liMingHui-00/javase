@@ -11,5 +11,7 @@ public class D7 {
             System.out.println((char) read);
              read = fileInputStream.read();
         }
+//        关闭流
+        fileInputStream.close();
     }
 }
