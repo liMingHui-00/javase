@@ -18,5 +18,7 @@ public class D10 {
             System.out.println(s);
             read = fileInputStream.read(bytes1);
         }
+        fileOutputStream.close();
+        fileInputStream.close();
     }
 }

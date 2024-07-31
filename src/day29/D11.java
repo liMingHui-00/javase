@@ -11,5 +11,6 @@ public class D11 {
         String writeMsg = scanner.nextLine();
         byte[] bytes = writeMsg.getBytes();
         fileOutputStream.write(bytes);
+        fileOutputStream.close();
     }
 }

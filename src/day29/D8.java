@@ -11,5 +11,6 @@ public class D8 {
             System.out.println((char) read);
             read = fileReader.read();
         }
+        fileReader.close();
     }
 }
