@@ -11,6 +11,7 @@ public class D4 {
         while ((i = bufferedInputStream.read(bytes))!=-1){
             bufferedOutputStream.write(bytes,0,i);
         }
+        bufferedOutputStream.flush();
         bufferedOutputStream.close();
         bufferedInputStream.close();
     }
@@ -27,12 +28,13 @@ public class D4 {
     }
     public static void main(String[] args) throws IOException {
         long startime = System.currentTimeMillis();
-        copyByBuffer("aa/a.mp4","aa/bb/a.mp4");
+        copyByBuffer("aa/b.mp4","aa/bb/b.mp4");
         long endtime = System.currentTimeMillis();
         System.out.println(endtime-startime);
         long l = System.currentTimeMillis();
-        copy("aa/a.mp4","aa/cc/a.mp4");
+        copy("aa/b.mp4","aa/cc/b.mp4");
         long l1 = System.currentTimeMillis();
         System.out.println(l1-l);
+
     }
 }
