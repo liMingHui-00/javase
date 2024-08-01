@@ -17,6 +17,5 @@ public class D9 {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
