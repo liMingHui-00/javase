@@ -8,6 +8,8 @@ public class D6 {
     public static void main(String[] args){
         try( FileOutputStream fileOutputStream = new FileOutputStream("aa/qq.txt");
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            objectOutputStream.writeUTF("gsagdgasgdgagh");
+            objectOutputStream.writeInt(55);
             objectOutputStream.writeBoolean(true);
             Student student = new Student("王五", 99);
             objectOutputStream.writeObject(student);
