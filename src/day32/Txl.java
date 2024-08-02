@@ -1,6 +1,10 @@
-package day28;
+package day32;
+import day28.Pinyin4j;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-public class Txl  {
+
+import java.io.Serializable;
+
+public class Txl implements Serializable {
     private String name;
     private String phone;
     private String groupName;
