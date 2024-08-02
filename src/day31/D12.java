@@ -6,5 +6,6 @@ public class D12 {
         D2 d2 = new D2();
         d1.start();
         d2.start();
+        d1.start();
     }
 }
