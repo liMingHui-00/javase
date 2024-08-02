@@ -1,12 +1,13 @@
 package day26.work;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BookDaoImpl implements BookDao{
     boolean flag = true;
-    List<Book> books = new ArrayList<>();
+
     Scanner scanner = new Scanner(System.in);
     @Override
     public void ui() {
@@ -41,9 +42,34 @@ public class BookDaoImpl implements BookDao{
           }
       }
     }
+    public  void toFile(List<Book> list){
+        try {
+            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("aa/book.txt"));
+            // 写入对象
+            oos.writeObject(list);
+            //
+            oos.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    //	2. 定义一个方法，反序列化读取上面的文件并返回List<Student>集合
+    public  List<Book> fromFile(){
+        try {
+            ObjectInputStream oin = new ObjectInputStream(new FileInputStream("aa/book.txt"));
+            //
+            List<Book> list = (List<Book>) oin.readObject();
+            //
+            oin.close();
+            return list;
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
+    }
 
     @Override
     public void add() {
+        List<Book> books = fromFile();
         System.out.println("请输入你想要添加的图书信息");
         System.out.println("添加图书的id");
         int id =  scanner.nextInt();
@@ -58,6 +84,7 @@ public class BookDaoImpl implements BookDao{
             Book book1 = new Book(id,name,author,price);
                     books.add(book1);
                     System.out.println("添加成功");
+            toFile(books);
 
         }else {
 //            id重复  重新录用
@@ -68,6 +95,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void delete() {
+        List<Book> books = fromFile();
 //从控制台输入你要删除的图书的编号，遍历集合把该编号的对应的图书信息从数组中删除
         System.out.println("请输入想要删除的图书编号");
         int id = scanner.nextInt();
@@ -81,6 +109,7 @@ public class BookDaoImpl implements BookDao{
                  if (qs.equalsIgnoreCase("y")){
                      books.remove(books.get(i));
                      System.out.println("删除成功");
+                     toFile(books);
                  }else {
                      System.out.println("取消删除");
                  }
@@ -90,6 +119,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void update() {
+        List<Book> books = fromFile();
         System.out.println("请输入你想要修改图书信息的id");
         int id =  scanner.nextInt();
             System.out.println("新的图书的名称");
@@ -104,6 +134,7 @@ public class BookDaoImpl implements BookDao{
                    books.add(i,book1);
                    books.remove(i+1);
                     System.out.println("修改成功");
+                    toFile(books);
                     break;
                 }
             }
@@ -111,6 +142,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void selectById() {
+        List<Book> books = fromFile();
         System.out.println("请输入想要查找的图书编号");
         int id = scanner.nextInt();
         for (int i = 0; i < books.size(); i++) {
@@ -124,6 +156,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void selectByName() {
+        List<Book> books = fromFile();
         System.out.println("请输入想要查找图书的名称");
         String name = scanner.next();
         for (int i = 0; i < books.size(); i++) {
@@ -135,6 +168,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void selectByPrice() {
+        List<Book> books = fromFile();
         System.out.println("输入价格的最大值");
         int max = scanner.nextInt();
         System.out.println("输入价格的最小值");
@@ -148,6 +182,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public void selectAll() {
+        List<Book> books = fromFile();
         for (int i = 0; i < books.size(); i++) {
             System.out.println(books.get(i));
         }
@@ -155,6 +190,7 @@ public class BookDaoImpl implements BookDao{
 
     @Override
     public boolean isOnly(int id) {
+        List<Book> books = fromFile();
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i)!=null){
 //                判断id是否唯一  如果存在就返回false
