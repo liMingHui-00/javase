@@ -8,6 +8,11 @@ public class D3 extends Thread {
     public void run() {
         synchronized (a){
             System.out.println(getName()+"获取A锁");
+            try {
+                a.wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             synchronized (b){
                 System.out.println(getName()+"获取B锁");
             }

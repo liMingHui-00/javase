@@ -10,6 +10,7 @@ public class D4 extends Thread {
                 System.out.println(getName()+"获取b锁");
                 synchronized (a){
                     System.out.println(getName()+"获取a锁");
+                    a.notify();
                 }
                 System.out.println(getName()+"释放a锁");
             }
