@@ -82,8 +82,15 @@ public class ExamService {
 //                              进入下一题
                               i++;
                          } else if (chooseAnswer.equalsIgnoreCase("p")) {
-//                              上一题
-                              i=i-1;
+//                                  上一题
+                              System.out.println(itemList.get(i-1).getTitle());
+                              System.out.println(itemList.get(i-1).getOptionA());
+                              System.out.println(itemList.get(i-1).getOptionB());
+                              System.out.println(itemList.get(i-1).getOptionC());
+                              System.out.println(itemList.get(i-1).getOptionD());
+//                              输入更改后的结果
+                              String newAnswer = scanner.next();
+                              answer[i] = newAnswer;
                          }else if (chooseAnswer.equalsIgnoreCase("n")){
                               //        显示下一题
                               i++;
@@ -110,7 +117,6 @@ public class ExamService {
      }
 //     评卷
      private void judgeExam() {
-
 //     把自己的答案与标准答案做对比
           for (int i = 0; i < itemList.size(); i++) {
                if (itemList.get(i).getAnswer().equalsIgnoreCase(answer[i])){
@@ -134,7 +140,7 @@ public class ExamService {
      }
 //     打印成绩
      public void printLastExam() throws IOException {
-//          FileInputStream fileInputStream = new FileInputStream("aa/Count.txt");
+//          FileInputStream fileInputStream = new FileInputStream("aa/result.txt");
 //          int read ;
 //          while ((read = fileInputStream.read())!=-1){
 //               System.out.println( (char) read+"0分");
