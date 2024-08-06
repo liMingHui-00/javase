@@ -126,6 +126,7 @@ public class ExamService {
           }
 //          根据count 打印分数
           System.out.println("考了"+count+"0分");
+//          FileOutputStream fileOutputStream = new FileOutputStream("");
      }
 //     保存用户答案和成绩的方法
      public void save() throws IOException {
@@ -140,12 +141,12 @@ public class ExamService {
      }
 //     打印成绩
      public void printLastExam() throws IOException {
-//          FileInputStream fileInputStream = new FileInputStream("aa/result.txt");
-//          int read ;
-//          while ((read = fileInputStream.read())!=-1){
-//               System.out.println( (char) read+"0分");
-//          }
-//          fileInputStream.close();
+          FileInputStream fileInputStream = new FileInputStream("aa/result.txt");
+          int read ;
+          while ((read = fileInputStream.read())!=-1){
+               System.out.println( (char) read+"0分");
+          }
+          fileInputStream.close();
      }
 //     打印菜单
      public void printMenu() throws IOException {
