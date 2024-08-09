@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>转出方信息</h3>
+    <div>
+      <span>转出卷商</span>
+      <input list="option" placeholder="请选择一个选项" />
+      <datalist id="option">
+        <option value="腾讯">腾讯</option>
+        <option value="阿里巴巴">阿里巴巴</option>
+      </datalist>
+      <br />
+      <span>账号号码</span>
+      <input type="text" placeholder="转出卷商的账号号码" />
+      <br />
+      <span>账号姓名</span>
+      <input type="text" placeholder="转出卷商的账号姓名" />
+      <br />
+      <span>股票信息</span>
+      <input type="text" placeholder="股票代码/名称" />
+      <input type="text" placeholder="股票数量，例如50" /> <button>添加</button>
+      <br />
+    </div>
+  </body>
+  <style>
+    span {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      font-size: 20px;
+      text-align: center;
+    }
+    input {
+      height: 25px;
+      font-size: 20px;
+    }
+    button {
+      background-color: blue;
+      height: 25px;
+      color: aliceblue;
+    }
+  </style>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .top {
+        align-items: center;
+        height: 150px;
+        font-size: 20px;
+      }
+      .top input {
+        margin: 10px;
+        height: 20px;
+      }
+      .main {
+        border: 1px solid #000;
+      }
+      .first {
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .count,
+      .remark,
+      .add,
+      .material {
+        font-size: 20px;
+        width: 50px;
+        height: 100%;
+      }
+      .material {
+        margin-left: 20px;
+      }
+      span {
+        font-size: 20px;
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        display: inline-block;
+      }
+      .clothing {
+        height: 30px;
+        width: 180px;
+        margin-left: 10px;
+      }
+      .first_msg,
+      .first_number {
+        width: 60px;
+        height: 30px;
+      }
+      .first_number {
+        margin-right: 100px;
+      }
+      .first_msg {
+        margin-right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>需求记录</h3>
+    <div class="top">
+      需求方：<input type="text" /> 时间：<input type="datetime-local" /><br />
+      联系人：<input type="text" /> 电话：<input type="number" /><br />
+      地 &nbsp; 址：<input type="text" /> 邮编：<input type="text" /><br />
+    </div>
+    <div class="main">
+      <div class="first">
+        <div class="material">物质</div>
+        <div class="count">数量</div>
+        <div class="remark">备注</div>
+        <div class="add">
+          <button>+添加</button>
+        </div>
+      </div>
+
+      <div class="second">
+        <span>1</span>
+        <select class="clothing" name="first" id="">
+          <option value="o1">防护服 单标EN14126</option>
+          <option value="o2">防护服 双标EN14605+EN14126</option>
+        </select>
+        <input type="number" class="first_number" />
+        <input type="text" class="first_msg" />
+        <button class="first_btn">X删除</button>
+      </div>
+
+      <div class="third">
+        <span>2</span>
+        <select class="clothing" name="first" id="">
+          <option value="o1">防护服 单标EN14126</option>
+          <option value="o2">防护服 双标EN14605+EN14126</option>
+        </select>
+        <input type="number" class="first_number" />
+        <input type="text" class="first_msg" />
+        <button class="first_btn">X删除</button>
+      </div>
+    </div>
+  </body>
+</html>

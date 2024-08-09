@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <iframe src="https://www.bilibili.com/" frameborder="0" name="ifr"></iframe> -->
+    <iframe frameborder="0" name="ifr"></iframe>
+    <a href="./1.html" target="ifr">aaaaaaaaaaaaa</a>
+    <input type="checkbox" name="" id="" />
+    <input type="week" name="" id="" />
+    <select name="sx" id="">
+      <optgroup label="中国">
+        <option value="北京">北京</option>
+        <option value="南京">南京</option>
+      </optgroup>
+      <optgroup label="外国">
+        <option value="东京" selected>东京</option>
+        <option value="西京">西京</option>
+      </optgroup>
+    </select>
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+    <input type="datetime-local" name="" id="" />
+    <datalist id="d">
+      <option value="java">java</option>
+      <option value="javascript">javascript</option>
+      <option value="c">c</option>
+    </datalist>
+    <form action="#">
+      邮件 <input type="email" name="" id="" /><br />
+      <input type="date" name="" id="" /><br />
+      <input type="time" name="" id="" /><br />
+      <input type="datetime-local" name="" id="" />
+      <br />
+      <input type="color" name="" id="" /><br />
+      <input type="url" name="" id="" /><br />
+      姓名：<input
+        type="text"
+        maxlength="5"
+        value="lisi01"
+        autofocus
+        placeholder="姓名"
+      />
+      <br />
+      性别： <input type="radio" name="sex" checked value="男" /> 男
+      <input type="radio" name="sex" value="女" /> 女
+      <br />
+      爱好 <input type="checkbox" name="hobby" />旅行
+      <input type="checkbox" name="hobby" />打球
+      <input type="checkbox" name="hobby" />编程<br />
+      <input type="file" name="头像" />
+      <input type="submit" value="提交" />
+      <input type="reset" value="重置" />
+      <input type="search" name="ss" id="" />
+      <br />
+      <input type="range" name="" id="" />
+    </form>
+    <form action="#" method="get">
+      <label for="user"> 姓名 </label>
+      <input type="text" id="user" name="user" />
+      <input type="submit" value="提交" />
+    </form>
+    注册商标&reg;
+    <div>我是一个div标签</div>
+    <div style="color: red"></div>
+    <div class="div1">div</div>
+    <div class="div2">div2</div>
+    <div class="div3">div3</div>
+    <div
+      style="
+        width: 200px;
+        height: 200px;
+        background-color: rgba(255, 0, 102, 0.596);
+      "
+    ></div>
+    <div style="width: 200px"></div>
+    <hr />
+    <div class="box1">box1</div>
+    <div class="box2" style="border: 10px solid salmon">div</div>
+    <div class="box3" style="background-color: rgb(255, 0, 0)">box</div>
+    <div class="box4">box4</div>
+    <!-- id选择器>类选择器>标签选择器>通配符选择器 -->
+    <!-- css样式是css样式语言的核心，样式我们学的核心只是，前期学习的font -->
+  </body>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: yellowgreen;
+    }
+    .box2 {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+    }
+    .box3 {
+      background-color: brown !important;
+    }
+    .box4 {
+      width: 200px;
+      height: 500px;
+      border: 10px solid navy;
+    }
+    .box1,
+    .box2,
+    .box3 {
+      background-color: #bfa;
+    }
+    /* .div1 {
+      float: left;
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+    .div2 {
+      float: left;
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    }
+    .div3 {
+      float: left;
+      width: 200px;
+      height: 200px;
+      border: 1px solid red;
+    } */
+  </style>
+</html>
