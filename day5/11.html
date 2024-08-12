@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h3 {
+        text-align: center;
+      }
+      p:not(.not) {
+        text-indent: 2em;
+      }
+      input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #000;
+        width: 200px;
+        text-align: center;
+      }
+      .bottom {
+        position: relative;
+      }
+      .bottom span {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .bottom input {
+        position: absolute;
+        bottom: 10;
+        right: 0;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>离职证明</h3>
+    <div class="main">
+      <p>
+        兹证明<input type="text" />身份证：<input type="text" />,自<input
+          type="text"
+        />入职我公司担任<input type="text" />一职，至<input
+          type="text"
+        />月因个人原因申请离职，在此期间工作努力，无不良表现。
+      </p>
+      <p>
+        经公司慎重考虑准予离职，已办理交接手续。因未签订相关保密协议，遵从择业自由。
+      </p>
+      <p class="not">特此注明。</p>
+      <div class="bottom">
+        <span>华山科技软件有限公司</span>
+        <br />
+        <input type="text" />
+      </div>
+    </div>
+  </body>
+</html>

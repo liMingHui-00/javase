@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 300px;
+      }
+      .top {
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+      }
+      .mid {
+        margin: 0 auto;
+        width: 200px;
+        position: relative;
+      }
+      .user {
+        margin: 10px 0;
+      }
+      .mid input {
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .mid span {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        font-size: 12px;
+        color: blue;
+      }
+      button {
+        background-color: rgb(78, 110, 242);
+        width: 200px;
+        height: 30px;
+        color: aliceblue;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .bottom {
+        font-size: 12px;
+        text-align: center;
+      }
+      .bottom span {
+        color: rgb(120, 144, 244);
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top">
+        <div class="zhanghao">账号登录</div>
+        <div class="duanxin">短信登录</div>
+      </div>
+      <div class="mid">
+        <input
+          type="text"
+          class="user"
+          placeholder="手机号/用户名/邮箱"
+        /><br />
+        <input type="password" class="pwd" placeholder="密码" /><br />
+        <span>忘记密码?</span><br />
+        <button>登录</button>
+      </div>
+      <div class="bottom">
+        <input type="checkbox" />阅读并接受<span>百度用户协议</span>和<span
+          >隐私政策</span
+        >
+      </div>
+    </div>
+  </body>
+</html>

@@ -7,34 +7,48 @@
       .c1 {
         color: gray;
       }
+      textarea,
+      input {
+        text-indent: 1em;
+      }
+      .first {
+        position: relative;
+      }
+      .first span {
+        position: absolute;
+      }
+      textarea {
+        margin-left: 80px;
+      }
     </style>
   </head>
   <body>
-    <h1>基础信息</h1>
-    <p>
-      标题设置&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <h3>基础信息</h3>
+    <hr />
+    <p class="first">
+      <span>标题设置</span>
       <textarea class="c1" cols="39" rows="10">
 请输入商品标题，例如:【核小肉多】妃子笑荔枝500g+20g/盒、【脆甜爽口】纽扣蟠桃1000g+50g/份</textarea
       >
     </p>
     <p>
-      商品售卖价格&nbsp;
+      商品售卖价格
       <input type="text" placeholder="请输入商品售卖价格" />
     </p>
     <p>
-      商品采购价格&nbsp;
+      商品采购价格
       <input type="text" placeholder="请输入商品采购价格" />
     </p>
     <p>
-      划线价格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      划线价格
       <input type="text" placeholder="请输入划线价格" />
     </p>
     <p>
-      商品库存&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      商品库存
       <input type="text" placeholder="请输入商品库存" />
     </p>
     <p>
-      计量单位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      计量单位
       <input list="options" placeholder="请选择" style="width: 170px" />
       <datalist id="options">
         <option value="选项 3"></option>
