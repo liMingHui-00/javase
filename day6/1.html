@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .top {
+        display: flex;
+        width: 990px;
+        height: 100px;
+        justify-content: space-between;
+      }
+      .logo img {
+        width: 190px;
+        height: 100%;
+      }
+      .nav {
+        display: flex;
+        width: 600px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: large;
+      }
+      .search {
+        display: flex;
+        width: 200px;
+        height: 100%;
+      }
+      .search input {
+        margin-left: 10px;
+        margin-top: 25px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      ul {
+        width: 200px;
+      }
+      ul li {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        align-items: center;
+        background-color: grey;
+        color: aliceblue;
+      }
+      li div {
+        padding: 10px;
+      }
+      .main {
+        position: relative;
+      }
+      .right img {
+        position: absolute;
+        top: 0;
+        height: 500px;
+        width: 790px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="logo">
+          <img src="./logo.png" alt="" />
+        </div>
+        <div class="nav">
+          <span>小米手机</span>
+          <span>红米手机</span>
+          <span>电视</span>
+          <span>笔记本</span>
+          <span>平板</span>
+          <span>家电</span>
+          <span>路由器</span>
+          <span>服务中心</span>
+          <span>社区</span>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="洗衣机" />
+        </div>
+      </div>
+      <div class="main">
+        <div>
+          <ul>
+            <li>
+              <div>手机</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>电视</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>家电</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>笔记本 平板 显示器</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>出行 穿戴</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>耳机 音箱</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>健康 儿童</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>生活 箱包</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>智能路由器</div>
+              <div>></div>
+            </li>
+            <li>
+              <div>电源 配件</div>
+              <div>></div>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <img src="./main.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

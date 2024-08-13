@@ -102,7 +102,6 @@
       }
       .top {
         justify-content: space-around;
-        /* align-items: ; */
         display: flex;
         font-size: 20px;
         line-height: 30px;
@@ -110,7 +109,6 @@
       }
       .bottom {
         display: flex;
-        background-color: yellowgreen;
         align-items: center;
       }
       .left {
@@ -132,6 +130,11 @@
         flex-direction: column;
         text-align: center;
         margin: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .item:hover {
+        box-shadow: 0 0 0 2px gray;
       }
       img {
         width: 100%;
