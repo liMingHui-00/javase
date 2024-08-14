@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_4524528_vkgiqb4hjsq.css"
+    />
     <style>
       * {
         margin: 0;
@@ -56,12 +60,73 @@
       .main {
         position: relative;
       }
+      .main ul li:hover {
+        background-color: orange;
+      }
+      .main ul li:hover .show {
+        display: block;
+      }
+      .show {
+        background-color: white;
+        width: 400px;
+        border: 1px solid #000;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        position: absolute;
+        font-size: 20px;
+        display: none;
+        top: 0px;
+        left: 200px;
+        z-index: 5;
+      }
+      .show p {
+        width: 100px;
+        height: 50px;
+        color: rgb(108, 108, 108);
+      }
+      .show p:hover {
+        color: orange;
+        cursor: pointer;
+      }
+      .right {
+        position: relative;
+        width: 990px;
+        border: 1px solid #000;
+      }
       .right img {
         position: absolute;
-        top: 0;
+        top: -500px;
         height: 500px;
         width: 790px;
         left: 200px;
+      }
+      .iconfont {
+        position: absolute;
+        top: -250px;
+        right: 0;
+        font-size: 20px;
+      }
+      .right .dr {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+      }
+      .dr {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .dr span {
+        width: 20px;
+        border-radius: 10px;
+        height: 20px;
+        background-color: gray;
+        margin: 0px 15px 0px 5px;
+      }
+      .dr span:hover {
+        background-color: white;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -92,47 +157,114 @@
             <li>
               <div>手机</div>
               <div>></div>
+              <div class="show">
+                <p>苹果手机</p>
+                <p>华为手机</p>
+                <p>小米手机</p>
+                <p>三星手机</p>
+              </div>
             </li>
             <li>
               <div>电视</div>
               <div>></div>
+              <div class="show">
+                <p>苹果电视</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>家电</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>笔记本 平板 显示器</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>出行 穿戴</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>耳机 音箱</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>健康 儿童</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>生活 箱包</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>智能路由器</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
             <li>
               <div>电源 配件</div>
               <div>></div>
+              <div class="show">
+                <p>苹果家电</p>
+                <p>华为电视</p>
+                <p>小米电视</p>
+                <p>三星电视</p>
+              </div>
             </li>
           </ul>
         </div>
         <div class="right">
           <img src="./main.png" alt="" />
+          <i class="iconfont icon-xiangyou1"></i>
+          <div class="dr">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </div>

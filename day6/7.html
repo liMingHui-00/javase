@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <style>
+    .father {
+      width: 300px;
+      height: 300px;
+      border: 1px solid rebeccapurple;
+      position: relative;
+    }
+    .father:hover .son1 {
+      display: none;
+    }
+    .son1 {
+      background-color: lightpink;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      /* margin-top: -15px; */
+      /* margin-left: 270px; */
+      cursor: pointer;
+      transform: translate(0, -50%);
+      /* border-radius: 0 5px 5px 0; */
+    }
+  </style>
+  <body>
+    <div class="father">
+      <div class="son1"><</div>
+    </div>
+  </body>
+</html>
