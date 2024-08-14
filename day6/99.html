@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        position: relative;
+        width: 200px;
+        border: 1px solid #000;
+        line-height: 50px;
+        margin: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0; /* 从底部开始 */
+        left: 0;
+        width: 100%; /* 宽度覆盖整个父容器 */
+        height: 0; /* 初始高度为0 */
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: height 0.5s ease-in-out; /* 动画效果改为高度变化 */
+      }
+      .item:hover .overlay {
+        height: 200px; /* 悬停时高度变为图片的高度 */
+      }
+      .item:hover {
+        box-shadow: 0 0 0 2px gray;
+      }
+      img {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bottom">
+        <div class="right">
+          <div class="item">
+            <img src="./1.png" alt="图片" />
+            <span>中国大boy</span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .container {
+        width: 800px;
+        border: 1px solid #000;
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+      }
+
+      .right {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+      }
+      .item {
+        position: relative;
+        width: 200px;
+        border: 1px solid #000;
+        line-height: 50px;
+        margin: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0; /* 从底部开始 */
+        left: 0;
+        width: 100%; /* 宽度覆盖整个父容器 */
+        height: 0; /* 初始高度为0 */
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: height 0.5s ease-in-out; /* 动画效果改为高度变化 */
+        color: aliceblue;
+      }
+      .item:hover .overlay {
+        height: 200px;
+      }
+      .item:hover {
+        box-shadow: 0 0 0 2px gray;
+      }
+      img {
+        width: 100%;
+        height: 120px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="bottom">
+        <div class="right">
+          <div class="item">
+            <img src="./1.png" alt="" />
+            <span>中国大boy</span>
+            <div class="overlay">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, ea!
+            </div>
+          </div>
+          <div class="item">
+            <img src="2.png" alt="" />
+            <span>Lorem ipsum dolor sit</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item">
+            <img src="3.png" alt="" />
+            <span>Losum.</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item">
+            <img src="4.png" alt="" />
+            <span>Lorem.</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item">
+            <img src="5.png" alt="" />
+            <span>ipsum.</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="item">
+            <img src="6.png" alt="" />
+            <span>dolor.</span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
