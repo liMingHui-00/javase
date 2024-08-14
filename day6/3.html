@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/c/font_4524528_96xvhwdwa29.css"
+    />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 250px;
+        height: 250px;
+        border: 1px solid #000;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        display: flex;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+      .box3 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: wheat;
+      }
+      .box5 {
+        width: 50px;
+        height: 50px;
+        /* background-color: red; */
+        align-self: baseline;
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2">1</div>
+      <div class="box3">2</div>
+      <div class="box4">3</div>
+      <div class="box3">2</div>
+      <div class="box5"><li class="iconfont icon-xueren"></li></div>
+    </div>
+  </body>
+</html>
