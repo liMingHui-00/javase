@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 10. 打印1到100之内的整数，跳过包含3的数字
+      document.write("<h2>1到100内的整数（不包含3）：</h2>")
+      let countToPrint = 0
+      for (let i = 1; i <= 100; i++) {
+        if (!i.toString().includes("3")) {
+          if (countToPrint > 0 && countToPrint % 5 === 0) {
+            document.write("<br>")
+          }
+          document.write(i + " ")
+          countToPrint++
+        }
+      }
+    </script>
+  </body>
+</html>

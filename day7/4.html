@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <button onclick="calculateDigitSum()">计算</button>
+    <script>
+      function calculateDigitSum() {
+        var input = prompt("请输入一个四位数：")
+        var num = parseInt(input, 10)
+        var sum = 0
+        sum += Math.floor(num / 1000)
+        sum += Math.floor((num % 1000) / 100)
+        sum += Math.floor((num % 100) / 10)
+        sum += num % 10
+        alert("各位数字之和为：" + sum)
+      }
+    </script>
+  </body>
+</html>

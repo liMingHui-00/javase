@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 9. 计算日期是年份的第几天
+      let year = prompt("请输入年份")
+      let month = prompt("请输入月份")
+      let day = prompt("请输入日期")
+      let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+      let isLeapYear = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
+      if (isLeapYear) daysInMonth[1] = 29
+      let dayOfYear =
+        parseInt(day) +
+        daysInMonth.slice(0, month - 1).reduce((acc, cur) => acc + cur, 0)
+      document.write(
+        `<p>${year}年${month}月${day}日是这一年的第 ${dayOfYear} 天。</p>`
+      )
+    </script>
+  </body>
+</html>

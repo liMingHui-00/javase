@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 5. 计算水仙花数
+      function isNarcissistic(num) {
+        let str = num.toString()
+        let sum = 0
+        for (let char of str) {
+          sum += Math.pow(parseInt(char), 3)
+        }
+        return sum === num
+      }
+
+      let count = 0
+      document.write("<p>水仙花数：</p><ul>")
+      for (let i = 100; i <= 999; i++) {
+        if (isNarcissistic(i)) {
+          document.write(`<li>${i}</li>`)
+          count++
+        }
+      }
+      document.write(`</ul><p>共计 ${count} 个水仙花数。</p>`)
+    </script>
+  </body>
+</html>

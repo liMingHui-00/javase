@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 8. 中英文星期转换器
+      let chineseDay = prompt("请输入中文的星期几（如：星期一）")
+      let englishDay
+      switch (chineseDay) {
+        case "星期一":
+          englishDay = "Monday"
+          break
+        case "星期二":
+          englishDay = "Tuesday"
+          break
+        case "星期三":
+          englishDay = "Wednesday"
+          break
+        case "星期四":
+          englishDay = "Thursday"
+          break
+        case "星期五":
+          englishDay = "Friday"
+          break
+        case "星期六":
+          englishDay = "Saturday"
+          break
+        case "星期日":
+          englishDay = "Sunday"
+          break
+        default:
+          englishDay = "输入有误"
+      }
+      document.write(`<p>${chineseDay} 对应的英文是 ${englishDay}。</p>`)
+    </script>
+  </body>
+</html>
