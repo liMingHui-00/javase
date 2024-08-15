@@ -6,7 +6,7 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="//at.alicdn.com/t/c/font_4524528_vkgiqb4hjsq.css"
+      href="//at.alicdn.com/t/c/font_4524528_z9uopghqwrl.css"
     />
     <style>
       * {
@@ -14,10 +14,26 @@
         padding: 0;
         box-sizing: border-box;
       }
+      .top_nav {
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #424242;
+      }
+      .top_nav span {
+        color: #b0b0b0;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .top_nav span:hover {
+        color: white;
+      }
       .top {
         display: flex;
         width: 990px;
         height: 100px;
+        margin: 0 auto;
         justify-content: space-between;
       }
       .logo img {
@@ -58,7 +74,10 @@
         padding: 10px;
       }
       .main {
+        margin: 0 auto;
         position: relative;
+        height: 500px;
+        width: 990px;
       }
       .main ul li:hover {
         background-color: orange;
@@ -103,6 +122,7 @@
         left: 200px;
       }
       .iconfont {
+        background-color: yellow;
         position: absolute;
         top: -250px;
         right: 0;
@@ -128,10 +148,84 @@
         background-color: white;
         cursor: pointer;
       }
+      .advertisement {
+        width: 990px;
+        margin: 0 auto;
+        height: 120px;
+        margin-top: 10px;
+      }
+      .mid_nav {
+        /* background-color: brown; */
+        display: flex;
+        justify-content: space-between;
+      }
+      .mid_nav img {
+        margin-top: 10px;
+        height: 170px;
+        width: 200px;
+      }
+      .top {
+        justify-content: space-around;
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 10px;
+      }
+      .navitem {
+        height: 614px;
+        width: 990px;
+        display: flex;
+        justify-content: space-between;
+        margin: 380px auto 0px auto;
+      }
+      .navitem .left img {
+        width: 200px;
+        height: 614px;
+      }
+      .navitem_right {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: space-between;
+      }
+      .navitem_item {
+        margin: 10px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+      }
+      .navitem .navitem_item img {
+        width: 200px;
+        height: 150px;
+      }
+      .navitem_item span {
+        text-align: center;
+      }
+      .navitem_item span:nth-of-type(1) {
+        margin-top: 5px;
+        color: #333;
+        font-size: 14px;
+      }
+      .navitem_item span:nth-of-type(2) {
+        font-size: 12px;
+        color: #b0b0b0;
+        margin-bottom: -10px;
+      }
+      .navitem_item span:nth-of-type(3) {
+        font-size: 12px;
+        color: #ff6700;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="top_nav">
+        <span>小米官网</span><span>小米商城</span><span>小米澎湃OS</span
+        ><span>小米汽车</span><span>云服务</span><span>loT</span
+        ><span>有品</span><span>小艾开放平台</span><span>资质证照</span
+        ><span>协议规则</span><span>下载app</span><span>Select Location</span
+        ><span>登录</span><span>注册</span><span>消息通知</span
+        ><span>购物车</span>
+      </div>
       <div class="top">
         <div class="logo">
           <img src="./logo.png" alt="" />
@@ -264,6 +358,70 @@
             <span></span>
             <span></span>
             <span></span>
+          </div>
+        </div>
+        <div class="mid_nav">
+          <!-- <div class="tubiao"> -->
+          <!-- <i class="iconfont icon-xiangyou1"></i> -->
+          <!-- <i class="iconfont icon-baozhangfuwu"></i> -->
+          <!-- <i class="iconfont icon-qiyetuangou"></i> -->
+          <!-- <i class="iconfont icon-Fmatongdao"></i> -->
+          <!-- <i class="iconfont icon-mifenka"></i> -->
+          <!-- <i class="iconfont icon-yijiuhuanxin"></i> -->
+          <!-- <i class="iconfont icon-iconfontshoujichongzhi"></i> -->
+          <!-- </div> -->
+          <div><img src="./11.png" alt="" /></div>
+          <div><img src="./12.png" alt="" /></div>
+          <div><img src="./13.png" alt="" /></div>
+          <div><img src="./14.png" alt="" /></div>
+        </div>
+
+        <img class="advertisement" src="./1.webp" alt="" />
+        <div class="top">
+          <span>手机</span>
+          <span>查看更多</span>
+        </div>
+      </div>
+      <div class="navitem">
+        <div class="left">
+          <img src="./15.png" alt="" />
+        </div>
+        <div class="navitem_right">
+          <div class="navitem_item">
+            <img src="./21.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
+          </div>
+          <div class="navitem_item">
+            <img src="./22.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
+          </div>
+          <div class="navitem_item">
+            <img src="./22.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
+          </div>
+          <div class="navitem_item">
+            <img src="./22.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
+          </div>
+          <div class="navitem_item">
+            <img src="./21.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
+          </div>
+          <div class="navitem_item">
+            <img src="./21.png" alt="" />
+            <span>Redmi K70 至尊版</span><br />
+            <span>性能王 全面升级</span> <br />
+            <span>2599元起</span>
           </div>
         </div>
       </div>
