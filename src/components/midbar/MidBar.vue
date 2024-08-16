@@ -39,7 +39,6 @@
     height: 200px;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid #000;
 
 
 
@@ -83,9 +82,7 @@
   }
 
   img {
-    // margin: 100px 0;
     width: 1200px;
-    border: 1px solid #000;
   }
 
   hr {

@@ -135,7 +135,6 @@
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          border: 1px solid #000;
           display: none;
           color: #000;
           background-color: azure;

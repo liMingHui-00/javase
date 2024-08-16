@@ -51,8 +51,6 @@
   .nav {
     width: 1200px;
     height: 88px;
-    // border: 1px solid #000;
-    // background-color: yellowgreen;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -78,7 +76,6 @@
       }
 
       div {
-        // border: 1px solid #000;
         color: #333;
         font-size: 18px;
         height: 100%;
@@ -87,17 +84,14 @@
         input {
           width: 60px;
           height: 80%;
-          // background-color: brown;
         }
 
         .icon-sousuokuang {
-          // color: rgb(255, 103, 0);
           width: 50px;
           height: 80%;
           font-size: 18px;
           text-align: center;
           display: inline-block;
-          // background-color: brown;
         }
       }
     }

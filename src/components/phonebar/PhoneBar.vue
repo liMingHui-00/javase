@@ -106,7 +106,6 @@
   height: 700px;
   margin: 0 auto;
   margin-top: 160px;
-  border: 1px solid #000;
 
   .top {
     display: flex;
@@ -119,7 +118,6 @@
   }
 
   .main {
-    // background-color: yellowgreen;
     width: 100%;
     display: flex;
     justify-content: space-between;
