@@ -61,6 +61,7 @@
       width: 56px;
       height: 56px;
       font-size: 56px;
+      color: rgba(153, 153, 153, .3);
     }
 
     .navbar {

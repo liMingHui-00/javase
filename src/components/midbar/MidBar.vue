@@ -45,8 +45,10 @@
       flex-direction: column;
       align-items: center;
 
+
       .iconfont {
-        color: aliceblue;
+
+        color: rgb(153, 153, 153);
         font-size: 35px;
       }
     }

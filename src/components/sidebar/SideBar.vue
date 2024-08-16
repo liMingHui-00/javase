@@ -45,6 +45,7 @@
     justify-content: center;
     height: 85px;
     align-items: center;
+    color: rgb(153, 153, 153);
 
     .iconfont {
       font-size: 30px;
