@@ -8,7 +8,7 @@
         Location</span><span>登录</span><span>注册</span><span>消息通知</span><span>购物车</span>
     </div>
     <div class="nav">
-      <i class="iconfont icon-xiaomi"></i>
+      <i class="iconfont color-xiaomi"></i>
       <div class="navbar">
         <div>xiaomi手机</div>
         <div>redmi手机</div>
@@ -57,11 +57,10 @@
     align-items: center;
     margin: 0 auto;
 
-    .icon-xiaomi {
+    .color-xiaomi {
       width: 56px;
       height: 56px;
       font-size: 56px;
-      color: rgba(153, 153, 153, .3);
     }
 
     .navbar {

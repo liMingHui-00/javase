@@ -14,6 +14,10 @@
         <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8dede2520f8dfff9c9b690af498cafe8.jpg?w=632&h=340" alt="">
         <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1ac77590368ff636d0b4f6a988133f55.png?w=632&h=340" alt="">
       </div>
+      <hr>
+      <img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/431c27bed2794603e0f917119121cd2a.png?thumb=1&w=1533&h=150&f=webp&q=90"
+        alt="">
     </div>
   </div>
 </template>
@@ -37,6 +41,8 @@
     flex-wrap: wrap;
     border: 1px solid #000;
 
+
+
     div {
       width: 80px;
       height: 80px;
@@ -45,6 +51,9 @@
       flex-direction: column;
       align-items: center;
 
+      &:hover {
+        cursor: pointer;
+      }
 
       .iconfont {
 
@@ -66,9 +75,22 @@
     img {
       width: 300px;
       height: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
+  img {
+    // margin: 100px 0;
+    width: 1200px;
+    border: 1px solid #000;
+  }
+
+  hr {
+    opacity: 0;
+  }
 
 }
 </style>
