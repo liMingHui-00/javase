@@ -82,26 +82,6 @@
             <p>三星电视</p>
           </div> -->
         </li>
-        <li>
-          <div>智能路由器</div>
-          <div>></div>
-          <!-- <div class="show">
-            <p>苹果家电</p>
-            <p>华为电视</p>
-            <p>小米电视</p>
-            <p>三星电视</p>
-          </div> -->
-        </li>
-        <li>
-          <div>电源 配件</div>
-          <div>></div>
-          <!-- <div class="show">
-            <p>苹果家电</p>
-            <p>华为电视</p>
-            <p>小米电视</p>
-            <p>三星电视</p>
-          </div> -->
-        </li>
       </ul>
 
     </div>
@@ -123,8 +103,7 @@
   display: flex;
   width: 1200px;
   height: 436px;
-  background-color: yellowgreen;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
 
 
   .left {
@@ -156,7 +135,6 @@
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          // display: block;
           border: 1px solid #000;
           display: none;
           color: #000;
