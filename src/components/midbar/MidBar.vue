@@ -39,7 +39,7 @@
     height: 200px;
     justify-content: space-around;
     flex-wrap: wrap;
-
+    background-color: rgb(95, 87, 80);
 
 
     div {
@@ -49,6 +49,7 @@
       justify-content: space-around;
       flex-direction: column;
       align-items: center;
+      color: aliceblue;
 
       &:hover {
         cursor: pointer;

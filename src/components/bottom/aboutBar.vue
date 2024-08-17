@@ -57,7 +57,7 @@
   display: flex;
   width: 800px;
   justify-content: space-between;
-
+  margin-left: 50px;
 
   .first {
     color: grey;
@@ -90,7 +90,7 @@
 .right_bar {
   width: 395px;
   height: 500px;
-  margin-left: 805px;
+  margin-left: 860px;
   margin-top: -235px;
   text-align: center;
 

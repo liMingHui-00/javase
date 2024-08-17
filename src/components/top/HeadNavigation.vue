@@ -19,7 +19,7 @@
         <div>路由器</div>
         <div>服务中心</div>
         <div>社区</div>
-        <div><input type="text"><i class="iconfont icon-sousuokuang"></i></div>
+        <div><input type="text" placeholder="笔记本"><i class="iconfont icon-sousuokuang"></i></div>
       </div>
     </div>
   </div>
@@ -84,6 +84,10 @@
         input {
           width: 60px;
           height: 80%;
+          border-radius: 10px;
+          padding: 10px;
+          border: 1px solid rgba($color: #000000, $alpha: 0.1);
+          outline: none;
         }
 
         .icon-sousuokuang {
