@@ -5,23 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <button onmouseover="xt()" onmouseout="lk()" ondblclick="db()">双击</button> -->
-    <select onchange="fn(this.value)">
+    <!-- <select onchange="fn(this.value)">
       <option value="河南省">河南省</option>
       <option value="山东省">山东省</option>
       <option value="河北省">河北省</option>
     </select>
+    <div class="a">s</div>
+    <div class="a"></div>
+    <div class="a"></div>
     <form action="http://www.baidu.com" onsubmit="return fn2()">
       <input type="submit" value="提交" />
-    </form>
+    </form> -->
+    <!-- <button class="btn">点击</button> -->
+    <button onclick="qu()">取消事件</button>
   </head>
   <body>
     <script>
-      function fn(s) {
-        console.log(s)
+      // window.onmousemove = (e) => {
+      //   console.log(e.screenX,e.screenY)
+      // }
+      // window.onkeydown = (e) => {
+      //   console.log(e.key)
+      // }
+      let btn = document.querySelector("button")
+      function f() {
+        console.log("移动")
       }
-      function fn2() {
-        return true
+      btn.addEventListener("mouseover", f)
+      btn.onclick = () => {
+        btn.removeEventListener("mouseover", f)
       }
+
+      // let btn = document.querySelector(".btn")
+      // btn.addEventListener("click", () => {
+      //   console.log("哈哈哈哈")
+      // })
+      // console.log(document.querySelectorAll("div"))
+      // function fn(s) {
+      //   console.log(s)
+      // }
+      // function fn2() {
+      //   return true
+      // }
       // function fn() {
       //   console.log("我是无参无返回值")
       // }
