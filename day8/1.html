@@ -4,31 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <form action="" =""></form> -->
+    <!-- <button onmouseover="xt()" onmouseout="lk()" ondblclick="db()">双击</button> -->
+    <select onchange="fn(this.value)">
+      <option value="河南省">河南省</option>
+      <option value="山东省">山东省</option>
+      <option value="河北省">河北省</option>
+    </select>
+    <form action="http://www.baidu.com" onsubmit="return fn2()">
+      <input type="submit" value="提交" />
+    </form>
   </head>
   <body>
     <script>
-      function fn() {
-        console.log("我是无参无返回值")
+      function fn(s) {
+        console.log(s)
       }
-      fn()
-      function fn2(name) {
-        console.log(name)
+      function fn2() {
+        return true
       }
-      fn2("lisi")
-      function fn3(...arguments) {
-        return arguments
-      }
-      console.log("fn3" + fn3("b", true, null, undefined, NaN, "d"))
-      let fn4 = function (a, b) {
-        return a + b
-      }
-      console.log(fn4(4, true))
-      let fn5 = (a, b) => {
-        console.log(a + b)
-      }
-      fn5(undefined, true)
-      fn5(null, true)
+      // function fn() {
+      //   console.log("我是无参无返回值")
+      // }
+      // function db() {
+      //   console.log("双击")
+      // }
+      // function xt() {
+      //   console.log("悬停")
+      // }
+      // function lk() {
+      //   console.log("离开")
+      // }
+      // fn()
+      // function fn2(name) {
+      //   console.log(name)
+      // }
+      // fn2("lisi")
+      // function fn3(...arguments) {
+      //   return arguments
+      // }
+      // console.log("fn3" + fn3("b", true, null, undefined, NaN, "d"))
+      // let fn4 = function (a, b) {
+      //   return a + b
+      // }
+      // console.log(fn4(4, true))
+      // let fn5 = (a, b) => {
+      //   console.log(a + b)
+      // }
+      // fn5(undefined, true)
+      // fn5(null, true)
+      // let aa = "aahdgjsgsa"
+      // ;(function fn8() {
+      //   console.log("哈哈哈8888", aa)
+      // })()
+      // ;(function fn9() {
+      //   console.log("哈哈哈9999", aa)
+      // })()
+      // ;(function () {
+      //   console.log("哈哈哈00000", aa)
+      // })()
+      // ;(function () {
+      //   console.log("哈哈哈11111", aa)
+      // })()
     </script>
   </body>
 </html>
