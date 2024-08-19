@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <form action="" =""></form> -->
+  </head>
+  <body>
+    <script>
+      function fn() {
+        console.log("我是无参无返回值")
+      }
+      fn()
+      function fn2(name) {
+        console.log(name)
+      }
+      fn2("lisi")
+      function fn3(...arguments) {
+        return arguments
+      }
+      console.log("fn3" + fn3("b", true, null, undefined, NaN, "d"))
+      let fn4 = function (a, b) {
+        return a + b
+      }
+      console.log(fn4(4, true))
+      let fn5 = (a, b) => {
+        console.log(a + b)
+      }
+      fn5(undefined, true)
+      fn5(null, true)
+    </script>
+  </body>
+</html>
