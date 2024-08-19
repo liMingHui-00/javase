@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll to Top Example</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 2900px;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      #back-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: none;
+      }
+
+      #back-to-top-btn:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        malesuada laoreet turpis, vel hendrerit nulla faucibus at. Donec euismod
+        purus eget justo volutpat, non aliquam neque molestie. Nulla facilisi.
+        Sed quis metus et tellus dignissim placerat. Nam non velit ut nunc
+        fermentum tincidunt. Vestibulum ante ipsum primis in faucibus orci
+        luctus et ultrices posuere cubilia curae; Cras auctor dui vel diam
+        convallis, vitae mollis risus tempor. Integer quis nisl ac erat rutrum
+        pulvinar.
+      </p>
+      <!-- 更多内容 -->
+    </div>
+    <button id="back-to-top-btn" style="display: none">顶部</button>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        var backToTopBtn = document.getElementById("back-to-top-btn")
+        if (window.scrollY > 600) {
+          backToTopBtn.style.display = "block"
+        } else {
+          backToTopBtn.style.display = "none"
+        }
+      })
+
+      document
+        .getElementById("back-to-top-btn")
+        .addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" })
+        })
+    </script>
+  </body>
+</html>

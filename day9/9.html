@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        position: relative;
+        height: 5600px;
+      }
+      button {
+        position: fixed;
+        right: 100px;
+        display: none;
+        top: 400px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button>回到顶部</button>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo molestias
+    nam officia impedit corporis reiciendis omnis rerum minus ipsam in optio ex
+    sint Voluptate laudantium ratione libero necessitatibus ad eaque minima
+    maiores, us veritatis necessitatibus cupiditate ut dignissimos magni. Quidem
+    cum est odit, placeat amet quis voluptatibus id delectus odio hic. Error,
+    exercitationem placeat facere, eius veritatis necessitatibus cupiditate ut
+    dignissimos magni. Quidem cum est odit, placeat amet quis voluptatibus id
+    delectus odio corporis reiciendis omnis rerum minus ipsam in optio ex sint
+    veniam minima magni. Quidem cum est odit, placeat amet quis voluptatibus id
+    delectus odio quibusdam laudantium quidem magni soluta omnis!
+  </body>
+  <script>
+    let b = document.querySelector("button")
+    window.addEventListener("scroll", () => {
+      console.log(window.scrollY)
+      if (window.scrollY > 200) {
+        b.style.display = "block"
+      }
+      if (window.scrollY < 20) {
+        b.style.display = "none"
+      }
+    })
+  </script>
+</html>
