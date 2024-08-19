@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="" id="" onchange="fn(this.value)">
+      <option value="red">红色</option>
+      <option value="yellow">yellow</option>
+      <option value="blue">blue</option>
+      <option value="#bfa">#bfa</option>
+      <option value="pink">pink</option>
+    </select>
+    <button id="btn">color</button>
+    <span onclick="ff(this)">455</span>
+  </body>
+  <script>
+    function fn(color) {
+      document.body.style.backgroundColor = color
+      console.log(this)
+    }
+    // function ff(t) {
+    //   console.log(t)
+    // }
+    let ff = (ttt) => {
+      // console.log(ttt)
+    }
+    let arr = ["red", "yellow", "blue", "#bfa"]
+
+    // btn.onclick = () => {
+    //   // console.log(this)
+
+    //   document.body.style.backgroundColor =
+    //     arr[parseInt(Math.random() * arr.length)]
+    // }
+    let arr3 = []
+    for (let i = 0; i < 10; i++) {
+      arr3[i] = i
+    }
+    arr3.push("a")
+    arr3.push("b")
+    arr3.push("c")
+    arr3.push("d")
+    arr3.push("e")
+    arr3.push("f")
+    let arr5 = "#"
+
+    // console.log(arr3[parseInt(Math.random() * arr3.length)])
+
+    btn.onclick = () => {
+      // console.log(this)
+      for (let i = 0; i < 6; i++) {
+        arr5 += arr3[parseInt(Math.random() * arr3.length)]
+      }
+      document.body.style.backgroundColor = arr5
+      arr5 = "#"
+    }
+  </script>
+</html>

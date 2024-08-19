@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li id="l" name="nn">1</li>
+      <li class="l" name="nn">2</li>
+      <li class="l" name="nn">3</li>
+      <li class="l"></li>
+      <li class="l" id="l">4</li>
+    </ul>
+  </body>
+  <script>
+    let li = document.querySelector("li")
+    li.innerText = "hahahhahha"
+    li.value = "累死啊"
+    console.log(li.outerHTML)
+    let lis = document.querySelectorAll(".l")
+    console.log(lis)
+    let ll = document.getElementsByName("nn")
+    console.log(ll)
+    let llll = document.getElementById("l")
+    console.log(llll)
+  </script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div
+      class="box"
+      style="
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 300px;
+      "
+    >
+      <span></span>
+      <br />
+      <button id="btn">点击换颜色</button>
+    </div>
+  </head>
+  <body>
+    <script>
+      let arr = []
+      for (let i = 0; i < 10; i++) {
+        arr[i] = i
+      }
+      arr.push("a")
+      arr.push("b")
+      arr.push("c")
+      arr.push("d")
+      arr.push("e")
+      arr.push("f")
+      let co = "#"
+      let btn = document.getElementById("btn")
+      let color = "#"
+      btn.onclick = () => {
+        for (let i = 0; i < 6; i++) {
+          co += arr[parseInt(Math.random() * arr.length)]
+        }
+        color = co
+        let span = document.querySelector("span")
+        span.innerText = "当前颜色是" + color
+        document.querySelector(".box").style.backgroundColor = co
+
+        co = "#"
+      }
+    </script>
+  </body>
+</html>

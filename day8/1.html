@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <form action="" enctype="" method=""></form>
     <!-- <button onmouseover="xt()" onmouseout="lk()" ondblclick="db()">双击</button> -->
     <!-- <select onchange="fn(this.value)">
       <option value="河南省">河南省</option>
@@ -17,25 +18,49 @@
       <input type="submit" value="提交" />
     </form> -->
     <!-- <button class="btn">点击</button> -->
-    <button onclick="qu()">取消事件</button>
+    <!-- <button onclick="qu()">取消事件</button> -->
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+    <style>
+      .box1 {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: #bfa;
+      }
+    </style>
   </head>
   <body>
     <script>
+      let box1 = document.querySelector(".box1")
+      let box2 = document.querySelector(".box2")
+      box1.addEventListener("click", () => {
+        console.log(1)
+      })
+      box2.addEventListener("click", (e) => {
+        console.log(2)
+        e.stopPropagation()
+      })
+
       // window.onmousemove = (e) => {
       //   console.log(e.screenX,e.screenY)
       // }
       // window.onkeydown = (e) => {
       //   console.log(e.key)
       // }
-      let btn = document.querySelector("button")
-      function f() {
-        console.log("移动")
-      }
-      btn.addEventListener("mouseover", f)
-      btn.onclick = () => {
-        btn.removeEventListener("mouseover", f)
-      }
-
+      // let btn = document.querySelector("button")
+      // function f() {
+      //   console.log("移动")
+      // }
+      // btn.addEventListener("mouseover", f)
+      // btn.onclick = () => {
+      //   btn.removeEventListener("mouseover", f)
+      // }
       // let btn = document.querySelector(".btn")
       // btn.addEventListener("click", () => {
       //   console.log("哈哈哈哈")

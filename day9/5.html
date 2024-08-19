@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      let div = document.querySelector("div")
+
+      function fn1() {
+        div.style.backgroundColor = "#bfa"
+      }
+
+      function fn2() {
+        div.style.backgroundColor = "#fff"
+      }
+
+      div.addEventListener("mouseover", fn1)
+      div.addEventListener("mouseout", fn2)
+    </script>
+  </body>
+</html>

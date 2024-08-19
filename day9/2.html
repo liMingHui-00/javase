@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <img src="../day2/3-4.png" alt="" />
+    <button id="btn">点击换图片</button>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let arr = [
+        "../day2/1.png",
+        "../day2/2.png",
+        "../day2/3-1.png",
+        "../day2/3-2.png",
+        "../day2/3-3.png",
+      ]
+      let btn = document.querySelector("#btn")
+      btn.onclick = () => {
+        let index = parseInt(Math.random() * arr.length)
+        document.querySelector("img").src = arr[index]
+      }
+    </script>
+  </body>
+</html>

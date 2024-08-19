@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" />吃饭 <input type="checkbox" />睡觉
+    <input type="checkbox" />打豆豆
+    <br />
+    <button>全选</button>
+    <button>全不选</button>
+    <button>反选</button>
+    <script>
+      // 全选
+      let btn1 = document.querySelectorAll("button")[0]
+      btn1.addEventListener("click", () => {
+        for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+          document.querySelectorAll("input")[i].checked = true
+        }
+      })
+      // 全不选
+      let btn2 = document.querySelectorAll("button")[1]
+      btn2.addEventListener("click", () => {
+        for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+          document.querySelectorAll("input")[i].checked = false
+        }
+      })
+      // 反选
+      let btn3 = document.querySelectorAll("button")[2]
+      btn3.addEventListener("click", () => {
+        for (let i = 0; i < document.querySelectorAll("input").length; i++) {
+          document.querySelectorAll("input")[i].checked =
+            !document.querySelectorAll("input")[i].checked
+        }
+      })
+    </script>
+  </body>
+</html>

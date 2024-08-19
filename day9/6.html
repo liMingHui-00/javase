@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <br /><br /><br />
+      <span></span>
+      <br /><br /><br />
+      <button id="btn">点名</button>
+    </div>
+    <script>
+      let div = document.querySelector("div")
+      let arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧", "蜘蛛精", "白骨精"]
+      let btn = document.getElementById("btn")
+      btn.onclick = () => {
+        let name = arr[parseInt(Math.random() * arr.length)]
+        let span = document.querySelector("span")
+        span.innerText = "点到名字的是" + name
+      }
+    </script>
+  </body>
+</html>
