@@ -88,14 +88,24 @@
     <div class="right">
       <img
         src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cd9d2fee6a631e17fed49543e57f5f75.jpg?thumb=1&w=1533&h=575&f=webp&q=90"
-        alt="">
-      <i class="iconfont icon-xiangyou1"></i>
+        alt="" ref="imgitem">
+      <i @click="changeImg()" class="iconfont icon-xiangyou1"></i>
     </div>
   </div>
 </template>
 
 <script setup>
-
+import { ref } from 'vue'
+let imgitem = ref('imgitem')
+let arr = ['https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cd9d2fee6a631e17fed49543e57f5f75.jpg?thumb=1&w=1533&h=575&f=webp&q=90', "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e71e1b185e379286038a6f114d4fa4fe.jpg?w=2452&h=920", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/84791aa03c4c69274342b42a158b6e8d.jpg?thumb=1&w=1533&h=575&f=webp&q=90", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/397f2569b126d8fba446b6bbf57ef771.jpg?thumb=1&w=1533&h=575&f=webp&q=90", "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6cadbc66519bde7927771d95389a953b.jpg?thumb=1&w=1533&h=575&f=webp&q=90"]
+let i = 0
+function changeImg() {
+  imgitem.value.src = arr[i]
+  i++
+  if (i >= arr.length) {
+    i = 0
+  }
+}
 </script>
 
 <style lang="scss" scoped>
