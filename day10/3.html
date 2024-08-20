@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    当前时间：<span></span>
+  </body>
+  <script>
+    let ds = setInterval(() => {
+      document.querySelector("span").innerHTML = new Date().toLocaleString()
+    }, 1000)
+    setTimeout(() => {
+      clearInterval(ds)
+    }, 6000)
+  </script>
+</html>

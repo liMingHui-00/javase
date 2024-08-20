@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <img src="../day2/3-4.png" alt="" />
+    <img src="../day2/1.png" alt="" />
+    <img src="../day2/2.png" alt="" />
+    <img src="../day2/3-1.png" alt="" />
+    <img src="../day2/3-2.png" alt="" />
+    <img src="../day2/3-3.png" alt="" />
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let i = 0
+      setInterval(() => {
+        document
+          .querySelectorAll("img")
+          .forEach((item) => (item.style.display = "none"))
+        document.querySelectorAll("img")[i].style.display = "block"
+        i++
+        if (i >= document.querySelectorAll("img").length) {
+          i = 0
+        }
+      }, 1000)
+      let fn = (a, b) => {
+        return a + b
+      }
+      fn()
+    </script>
+  </body>
+</html>

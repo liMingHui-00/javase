@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://www.baidu.com" method="get" onsubmit="return tj()">
+      <div>
+        账号：<input
+          type="text"
+          name="username"
+          id="user"
+          onblur="checkUser()"
+          placeholder="请输入账号"
+        />
+        <span id="userspan"></span>
+      </div>
+      <div>
+        密码：<input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="请输密码"
+          onblur="checkpwd(this.value)"
+        />
+        <span id="pwdspan"></span>
+      </div>
+      <div>
+        <input type="submit" value="注册" />
+      </div>
+    </form>
+  </body>
+  <script>
+    let useb = false
+    let pwdb = false
+    // setInterval(() => {
+    //   console.log(1)
+    // }, 1000)
+    function checkUser() {
+      let user = document.querySelector("#user").value
+      if (user) {
+        // 存在  检查是否合法
+        let reg = /^[a-zA-Z][0-9a-zA-Z]{4,10}$/
+        if (reg.test(user)) {
+          document.querySelector("#userspan").innerHTML =
+            "<b style='color:green'>√</b>"
+          useb = true
+        } else {
+          // 不合法
+          document.querySelector("#userspan").innerHTML =
+            "<b style='color:red'>X</b>"
+        }
+      } else {
+        document.querySelector("#userspan").innerHTML =
+          "<b style='color:red'>X</b>"
+      }
+    }
+    function checkpwd(pwd) {
+      let reg = /^\d{6}$/
+      if (reg.test(pwd)) {
+        document.querySelector("#pwdspan").innerHTML =
+          "<b style='color:green'>√</b>"
+        pwdb = true
+      } else {
+        // 不合法
+        document.querySelector("#pwdspan").innerHTML =
+          "<b style='color:red'>X</b>"
+      }
+    }
+    function tj() {
+      if (pwdb && useb) {
+        return true
+      }
+      return false
+    }
+  </script>
+</html>
