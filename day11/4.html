@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aa {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <span :class="sty">555</span>
+      <hr />
+      <a :href="lk">ll</a>
+      1`
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            sty: "aa",
+            lk: "https:www.lilichao.com",
+          }
+        },
+      })
+    </script>
+  </body>
+</html>

@@ -22,6 +22,15 @@
         <option value="河北省">河北省</option>
       </select>
       <textarea name="" v-model="remark" id="">sahdhjashdhshu</textarea>
+      <input type="text" v-model.lazy="sex" />{{sex}}
+      <input type="text" v-model.number="student.id" />{{student.id}}
+      <hr />
+      <button @click="test()">点击</button>
+      <hr />
+      <input type="text" @keyup="key" />
+      <hr />
+      <span>{{student}}</span>
+      <button @click="show">展示</button>
     </div>
     <script src="./vue.js"></script>
     <script>
@@ -33,10 +42,25 @@
             student: { id: "1001", name: "孙悟空", sex: "男" },
             hobby: ["男", "女"],
             sex: "男",
-
             ad: "河北省",
             remark: null,
           }
+        },
+        methods: {
+          fn1() {
+            console.log(new Date().toLocaleString())
+          },
+          test: () => {
+            console.log("箭头函数")
+          },
+          key(k) {
+            console.log(k.key)
+          },
+          show() {
+            console.log(this.student)
+
+            this.fn1()
+          },
         },
       })
     </script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <div v-if="a">55</div> -->
+      <ul>
+        <li v-for="(item,index) in arr">{{item.age}}--{{item.name}}</li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            arr: [
+              { name: "101", age: 212 },
+              { name: "01", age: 220 },
+              { name: "11", age: 223 },
+            ],
+          }
+        },
+      })
+    </script>
+  </body>
+</html>

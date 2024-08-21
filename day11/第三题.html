@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="./vue.js"></script>
+    <style>
+      #app {
+        width: 500px;
+        margin: 0 auto;
+      }
+      .top {
+        background-color: #bfa;
+        text-align: center;
+      }
+      .top input {
+        margin: 0 10px 30px;
+        width: 100px;
+        height: 30px;
+        padding: 10px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        margin: 0 auto;
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      table {
+        width: 500px;
+        text-align: center;
+      }
+      tr {
+        height: 50px;
+        line-height: 50px;
+      }
+      .bottom {
+        margin: 10px auto;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="top">
+        <h3>添加人物</h3>
+        <input type="text" v-model="id" placeholder="请输入id" />
+        <input type="text" v-model="name" placeholder="请输入name" />
+        <input type="text" v-model="gf" placeholder="请输入技能" />
+        <button @click="add">添加</button>
+      </div>
+      <hr />
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gf</th>
+            <th>del</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item,index) in list">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.gf}}</td>
+            <td>
+              <a href="#" @click="del(index)">删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="bottom">
+        数据总条数：{{totalLength}} 条
+
+        <a href="#" @click="removeall">清空数据</a>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 实例化vue对象
+    var app = new Vue({
+      el: "#app",
+      data: {
+        id: null,
+        name: null,
+        gf: null,
+        list: [
+          { id: 1, name: "孙悟空", gf: "72变" },
+          { id: 2, name: "猪八戒", gf: "三十六变" },
+        ],
+        total: 0,
+      },
+      computed: {
+        totalLength: function () {
+          return this.list.length
+        },
+      },
+      methods: {
+        add: function () {
+          let item = { id: this.id, name: this.name, gf: this.gf }
+          this.list.push(item)
+          console.log(this.list)
+        },
+        del: function (index) {
+          this.list = this.list.filter((item) => item !== this.list[index])
+          console.log()
+        },
+        removeall: function () {
+          this.list = []
+        },
+      },
+    })
+  </script>
+</html>

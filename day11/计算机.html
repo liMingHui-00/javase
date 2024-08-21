@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div id="app">
+    <input type="text" v-model.number="num1" />
+    <select v-model="op">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="text" v-model.number="num2" />
+    <button @click="tt">=</button>{{num3}}
+  </div>
+  <body>
+    <script src="./vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            num1: null,
+            num2: null,
+            num3: null,
+            op: ["+", "-", "*", "/"],
+          }
+        },
+        methods: {
+          tt() {
+            if (this.op == "+") {
+              this.num3 = this.num1 + this.num2
+            }
+            if (this.op == "-") {
+              this.num3 = this.num1 - this.num2
+            }
+            if (this.op == "*") {
+              this.num3 = this.num1 * this.num2
+            }
+            if (this.op == "/") {
+              this.num3 = this.num1 / this.num2
+            }
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
