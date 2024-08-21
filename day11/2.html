@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <span>{{hobby}}</span>
+
+      {{name}} {{student.id}}--{{student.name}}
+      <input type="text" v-model="name" />
+      <input type="checkbox" name="男" id="" value="男" v-model="hobby" />男
+      <input type="checkbox" name="女" value="女" id="" v-model="hobby" />女
+      <input type="checkbox" name="男" id="" value="男5" v-model="hobby" />男5
+      <input type="checkbox" name="女" value="女3" id="" v-model="hobby" />女3
+      <input type="radio" value="女" v-model="sex" /> 女
+      <input type="radio" value="男" v-model="sex" /> 男
+      <select name="" id="" v-model="ad">
+        <option value="河南省">河南省</option>
+        <option value="河北省">河北省</option>
+      </select>
+      <textarea name="" v-model="remark" id="">sahdhjashdhshu</textarea>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            name: "lisi",
+            student: { id: "1001", name: "孙悟空", sex: "男" },
+            hobby: ["男", "女"],
+            sex: "男",
+
+            ad: "河北省",
+            remark: null,
+          }
+        },
+      })
+    </script>
+  </body>
+</html>
