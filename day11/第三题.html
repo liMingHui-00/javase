@@ -49,10 +49,16 @@
     <div id="app">
       <div class="top">
         <h3>添加人物</h3>
-        <input type="text" v-model="id" placeholder="请输入id" />
+        <input
+          type="text"
+          v-model="id"
+          :disabled="show"
+          placeholder="请输入id"
+        />
         <input type="text" v-model="name" placeholder="请输入name" />
         <input type="text" v-model="gf" placeholder="请输入技能" />
-        <button @click="add">添加</button>
+        <button @click="add()" v-show="!xgbtn">添加</button>
+        <button @click="xg()" v-show="xgbtn">修改</button>
       </div>
       <hr />
       <table>
@@ -71,13 +77,13 @@
             <td>{{item.gf}}</td>
             <td>
               <a href="#" @click="del(index)">删除</a>
+              <a href="#" @click="update(index)">修改</a>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="bottom">
         数据总条数：{{totalLength}} 条
-
         <a href="#" @click="removeall">清空数据</a>
       </div>
     </div>
@@ -90,6 +96,9 @@
         id: null,
         name: null,
         gf: null,
+        // id输入框是否显示
+        show: false,
+
         list: [
           { id: 1, name: "孙悟空", gf: "72变" },
           { id: 2, name: "猪八戒", gf: "三十六变" },
@@ -100,19 +109,66 @@
         totalLength: function () {
           return this.list.length
         },
+        // 按钮文字
+        xgbtn: function () {
+          return this.show ? true : false
+        },
       },
       methods: {
         add: function () {
+          if (this.id === null || this.name === null || this.gf === null) {
+            alert("数据为空，添加失败")
+            return
+          }
+          // 判断唯一性
+          let flag = this.list.some((item) => {
+            if (item.id == this.id) {
+              return true
+            }
+          })
+          if (flag) {
+            alert("id已经存在")
+            // 清空输入框
+            this.id = null
+            this.name = null
+            this.gf = null
+            return
+          }
           let item = { id: this.id, name: this.name, gf: this.gf }
           this.list.push(item)
-          console.log(this.list)
+          // 清空输入框
+          this.id = null
+          this.name = null
+          this.gf = null
+        },
+        xg() {
+          let item = this.list.find((item) => item.id == this.id)
+          item.id = this.id
+          item.name = this.name
+          item.gf = this.gf
+          // 清空输入框
+          this.id = null
+          this.name = null
+          this.gf = null
+          this.show = false
         },
         del: function (index) {
-          this.list = this.list.filter((item) => item !== this.list[index])
-          console.log()
+          if (confirm("确认要删除吗")) {
+            this.list = this.list.filter((item) => item !== this.list[index])
+          }
+        },
+        update(index) {
+          // 展示到输入框中
+          this.id = this.list[index].id
+          // 把id框设置为不可修改
+          this.show = true
+          this.name = this.list[index].name
+          this.gf = this.list[index].gf
         },
         removeall: function () {
-          this.list = []
+          if (confirm("确认要清空吗")) {
+            this.list = []
+          }
         },
       },
     })

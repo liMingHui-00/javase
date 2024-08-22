@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p>姓名：{{name}}</p>
+      <p>年龄：{{age}}</p>
+      <p>性别：{{sex}}</p>
+      <p>爱好：{{hobby}}</p>
+      <p>地址：{{address}}</p>
+      <hr />
+      <p>{{fn}}</p>
+      <p>{{fn}}</p>
+      <p>{{fn}}</p>
+      <hr />
+      <p>{{mt()}}</p>
+      <p>{{mt()}}</p>
+      <p>{{mt()}}</p>
+      <p>{{mt()}}</p>
+      <hr />
+      <input type="number" name="" v-model="num" id="" max="99" min="1" />
+      <br />
+      {{money}}
+    </div>
+    <script src="../day11/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          name: "张三",
+          age: 18,
+          sex: "男",
+          hobby: ["吃饭", "睡觉", "打豆豆"],
+          address: "北京",
+          num: 0,
+          money: 0,
+        },
+        computed: {
+          fn() {
+            console.log("计算属性")
+            return this.name + " " + this.age + " " + this.sex
+          },
+        },
+        methods: {
+          mt() {
+            console.log("方法被调用了")
+            return this.name + " " + this.age + " " + this.sex
+          },
+        },
+        watch: {
+          num: function () {
+            this.money = this.num * 100
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
