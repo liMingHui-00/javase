@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .c {
+      color: red;
+    }
+  </style>
+  <body>
+    <div id="app">
+      xing<input type="text" v-model="xing" /> ming<input
+        type="text"
+        v-model="ming"
+      />{{name}}
+      <button @click="changeName()">改名</button>
+      <hr />
+      <span v-model="name" :class="{c:name.length==2}">{{name}}</span>
+    </div>
+    <script src="../day11/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            xing: "刘",
+            ming: "备",
+          }
+        },
+        computed: {
+          name: {
+            get() {
+              return this.xing + this.ming
+            },
+            set(name2) {
+              this.xing = name2.slice(0, 1)
+              this.ming = name2.slice(1)
+            },
+          },
+        },
+        methods: {
+          changeName() {
+            this.name = "成龙"
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
