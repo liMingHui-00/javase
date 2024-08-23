@@ -7,26 +7,32 @@
   </head>
   <body>
     <div id="app">
-      <input type="text" v-model="xing" />
-      <input type="text" v-model="ming" />
-
-      <input type="text" v-model="xing" />
-      <input type="text" v-model="ming" />
+      <div>
+        <wwwww></wwwww>
+        <sssss></sssss>
+      </div>
     </div>
     <script src="../day11/vue.js"></script>
     <script>
+      const hub = new Vue()
+      Vue.component("wwwww", {
+        template: '<button @click="chuan">华盛顿</button>',
+        methods: {
+          chuan() {
+            hub.$emit("jj", 100)
+          },
+        },
+      })
+      Vue.component("sssss", {
+        mounted() {
+          hub.$on("jj", (viewport) => {
+            alert(viewport)
+          })
+        },
+      })
+
       new Vue({
         el: "#app",
-        // data: {
-        //   xing: "刘",
-        //   ming: "备",
-        // },
-        data() {
-          return {
-            xing: "刘",
-            ming: "备",
-          }
-        },
       })
     </script>
   </body>

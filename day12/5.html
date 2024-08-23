@@ -1,0 +1,45 @@
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div id="app">
+      <router-link to="/user">user</router-link>
+      <router-link to="/register">register</router-link>
+      <router-link to="/login">login</router-link>
+      <router-view></router-view>
+    </div>
+  </head>
+  <body>
+    <script src="../day11/vue.js"></script>
+    <script src="./vue-router_3.0.2.js"></script>
+    <script>
+      let user = {
+        template: "<p>user</p>",
+      }
+      let register = {
+        template: "<p>register</p>",
+      }
+      let login = {
+        template: "<p>login</p>",
+      }
+      const router = new VueRouter({
+        mode: "history",
+        routes: [
+          {
+            component: user,
+
+            path: "/user",
+            // children: [{ path: "/login", component: login }],
+          },
+          { component: register, path: "/register" },
+          { component: login, path: "/login" },
+        ],
+      })
+      new Vue({
+        el: "#app",
+        router,
+      })
+    </script>
+  </body>
+</html>
