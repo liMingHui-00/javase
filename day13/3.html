@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <router-link to="/message">我的信息</router-link>
+      <router-link to="/login">登录</router-link>
+      <router-link to="/register">注册</router-link>
+      <hr />
+      <router-view></router-view>
+    </div>
+
+    <script src="./vue.js"></script>
+    <script src="./vue-router_3.0.2.js"></script>
+    <script>
+      let MyMessage = {
+        template: `
+            <div>
+                我的信息xxx:
+                姓名：xxx<br>
+               年龄:xxx
+            </div>
+            `,
+      }
+      let Login = {
+        template: `
+            <div>
+                <div>这是登录页面</div>
+                <hr>
+            <router-link to="/login/phone">手机号登录</router-link>
+            <router-link to="/login/cd">账号登录</router-link>
+            <hr>
+            <router-view></router-view>
+            </div>
+            `,
+      }
+      let LCd = {
+        template: `
+            <div>
+                <div>手机号登录页面</div>
+            </div>
+            `,
+      }
+      let LPhone = {
+        template: `
+            <div>
+                <div>账号登录页面</div>
+            </div>
+            `,
+      }
+
+      let Register = {
+        template: `
+            <div>
+                <div>注册xxxx</div>
+                <hr>
+                <div>
+            <router-link to="/register/phone">手机号注册</router-link>
+            <router-link to="/register/cd">账号注册</router-link>
+            <hr>
+            <router-view></router-view>
+                </div>
+            </div>
+            `,
+      }
+      let phone = {
+        template: `
+            <div>
+                手机号注册表单xxxx
+            </div>
+            `,
+      }
+      let cd = {
+        template: `
+            <div>
+                账户注册表单xxxx
+            </div>
+            `,
+      }
+      let router = new VueRouter({
+        routes: [
+          { path: "/message", component: MyMessage },
+          {
+            path: "/login",
+            component: Login,
+            children: [
+              { path: "/login/phone", component: LPhone },
+              { path: "/login/cd", component: LCd },
+            ],
+          },
+          {
+            path: "/register",
+            component: Register,
+            children: [
+              { path: "/register/phone", component: phone },
+              { path: "/register/cd", component: cd },
+            ],
+          },
+        ],
+      })
+      let v = new Vue({
+        el: "#main",
+        router,
+      })
+    </script>
+  </body>
+</html>

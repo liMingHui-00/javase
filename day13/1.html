@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <son @g="get($event)"></son>
+      <div :style="{fontSize: s +'px'}">父组件接收的字体大小：{{s}}px</div>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+      Vue.component("son", {
+        data() {
+          return {
+            add: 2,
+          }
+        },
+        template: `
+            <button @click="$emit('g',add)"">发送数据</button>
+            `,
+      })
+      let v = new Vue({
+        el: "#app",
+        data: {
+          m: "",
+          s: 20,
+        },
+        methods: {
+          get(p) {
+            this.s += p
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
